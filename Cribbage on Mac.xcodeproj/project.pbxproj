@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B23F8FB01D966B4B00FBBAE6 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B23F8FAE1D966B4B00FBBAE6 /* Player.cpp */; };
 		B28032351D9662FF00FC9AC3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B28032341D9662FF00FC9AC3 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B23F8FAE1D966B4B00FBBAE6 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		B23F8FAF1D966B4B00FBBAE6 /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		B28032311D9662FF00FC9AC3 /* Cribbage on Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Cribbage on Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28032341D9662FF00FC9AC3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +60,8 @@
 		B28032331D9662FF00FC9AC3 /* Cribbage on Mac */ = {
 			isa = PBXGroup;
 			children = (
+				B23F8FAE1D966B4B00FBBAE6 /* Player.cpp */,
+				B23F8FAF1D966B4B00FBBAE6 /* Player.hpp */,
 				B28032341D9662FF00FC9AC3 /* main.cpp */,
 			);
 			path = "Cribbage on Mac";
@@ -120,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23F8FB01D966B4B00FBBAE6 /* Player.cpp in Sources */,
 				B28032351D9662FF00FC9AC3 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +255,7 @@
 				B280323A1D9662FF00FC9AC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
