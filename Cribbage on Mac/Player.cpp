@@ -14,15 +14,15 @@ void PlayerCollection::nextTurn()
     // execute a cribbage turn
     std::cout << "player " << currPlayer->getName() << " went!!!" << "\n";
     
-    if(currPlayer == players.end()) currPlayer = players.begin();   // wrap around
+    if(currPlayer == players.end()-1)   // std::vector::end() returns the "past-the-end" element in the vector, so subtract 1
+        currPlayer = players.begin();   // wrap around
+    
     else currPlayer++;
 }
 
 PlayerCollection::PlayerCollection(unsigned numPlayers)
 {
     players.clear();
-    _LIBCPP_ASSERT(false, "hi");
-    _LIBCPP_ASSERT(1, "hi?");
     for(int p=0; p<numPlayers; p++)
     {
         std::string pName = "Player ";

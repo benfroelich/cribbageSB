@@ -9,7 +9,7 @@
 #include <iostream>
 #include "Player.hpp"
 
-PlayerCollection players(3);
+PlayerCollection players(3);    // create a 3 player game
 	
 int main(int argc, const char * argv[])
 {

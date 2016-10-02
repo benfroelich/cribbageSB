@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B23F8FB01D966B4B00FBBAE6 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B23F8FAE1D966B4B00FBBAE6 /* Player.cpp */; };
 		B28032351D9662FF00FC9AC3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B28032341D9662FF00FC9AC3 /* main.cpp */; };
+		B297933C1DA0CD210003D170 /* cribbage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B297933A1DA0CD210003D170 /* cribbage.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		B23F8FAF1D966B4B00FBBAE6 /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		B28032311D9662FF00FC9AC3 /* Cribbage on Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Cribbage on Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28032341D9662FF00FC9AC3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B297933A1DA0CD210003D170 /* cribbage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cribbage.cpp; path = "Cribbage on Mac/cribbage.cpp"; sourceTree = "<group>"; };
+		B297933B1DA0CD210003D170 /* cribbage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = cribbage.hpp; path = "Cribbage on Mac/cribbage.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,8 @@
 		B28032281D9662FF00FC9AC3 = {
 			isa = PBXGroup;
 			children = (
+				B297933A1DA0CD210003D170 /* cribbage.cpp */,
+				B297933B1DA0CD210003D170 /* cribbage.hpp */,
 				B28032331D9662FF00FC9AC3 /* Cribbage on Mac */,
 				B28032321D9662FF00FC9AC3 /* Products */,
 			);
@@ -125,6 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B297933C1DA0CD210003D170 /* cribbage.cpp in Sources */,
 				B23F8FB01D966B4B00FBBAE6 /* Player.cpp in Sources */,
 				B28032351D9662FF00FC9AC3 /* main.cpp in Sources */,
 			);

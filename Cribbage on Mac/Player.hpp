@@ -34,19 +34,5 @@ private:
     std::vector<Player> players;
     std::vector<Player>::iterator currPlayer;
 };
-class CribbagePlayerCollection : public PlayerCollection    // implement cribbage specifics
-{
-    CribbagePlayerCollection();
-    void nextTurn();    // overriden virtual from parent class
-};
-class CribbagePlayer : public Player    // add cribbage specifics
-{
-private:
-    typedef enum PLAYSTATE {PEGGING,        // peg
-                            COUNTING,       // count hand
-                            CUTTING,        // cut the deck
-                            CRIB}           // count their crib
-                            playState;
-};
 
 #endif /* Player_hpp */
