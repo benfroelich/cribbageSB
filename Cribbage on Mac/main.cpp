@@ -9,11 +9,12 @@
 #include <iostream>
 #include "Player.hpp"
 
-PlayerCollection players(3);    // create a 3 player game
+Game players(2,1,5);    // create a 3 player game
 	
 int main(int argc, const char * argv[])
 {
 
+    players.setNumPlayers(5);
     players.nextTurn();
     players.nextTurn();
     players.nextTurn();

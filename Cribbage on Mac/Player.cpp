@@ -9,7 +9,7 @@
 #include <iostream>
 #include "Player.hpp"
 
-void PlayerCollection::nextTurn()
+void Game::nextTurn()
 {
     // execute a cribbage turn
     std::cout << "player " << currPlayer->getName() << " went!!!" << "\n";
@@ -20,7 +20,13 @@ void PlayerCollection::nextTurn()
     else currPlayer++;
 }
 
-PlayerCollection::PlayerCollection(unsigned numPlayers)
+Game::Game(unsigned numPlayers, unsigned minPlayers, unsigned maxPlayers)
+{
+    this->minPlayers = minPlayers;
+    this->maxPlayers = maxPlayers;
+    this->setNumPlayers(numPlayers);
+}
+void Game::setNumPlayers(<#unsigned int numPlayers#>)
 {
     players.clear();
     for(int p=0; p<numPlayers; p++)

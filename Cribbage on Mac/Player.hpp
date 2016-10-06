@@ -24,15 +24,18 @@ private:
     std::vector<unsigned> points;
 };
 
-class PlayerCollection
+class Game
 {
 public:
-    PlayerCollection(unsigned numPlayers);
+    Game(unsigned numPlayers, unsigned minPlayers, unsigned maxPlayers);
     void setName(unsigned pNum, std::string name);
+    void setNumPlayers(unsigned int numPlayers);
     virtual void nextTurn();    // override for different game types
 private:
     std::vector<Player> players;
     std::vector<Player>::iterator currPlayer;
+    unsigned minPlayers;    // max number of players
+    unsigned maxPlayers;    // min number of players
 };
 
 #endif /* Player_hpp */

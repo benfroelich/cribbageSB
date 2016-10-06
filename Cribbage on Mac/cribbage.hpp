@@ -12,14 +12,15 @@
 #include <stdio.h>
 #include "Player.hpp"
 
-class CribbagePlayerCollection : public PlayerCollection    // implement cribbage specifics
+class CribbagePlayerCollection : public Game    // implement cribbage specifics
 {
+    CribbagePlayerCollection() : Game(3, 2, 4) {};
     void nextTurn();    // overriden virtual from parent class
 private:
     typedef enum PLAYSTATE {PEGGING,        // peg
                             COUNTING,       // count hand
-                            CUTTING,        // cut the deck
-                            CRIB}           // count their crib
+                            CRIB,           // count their crib
+                            NUM_PLAYSTATES}
     playState;
 
 };
