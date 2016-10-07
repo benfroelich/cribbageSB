@@ -5,16 +5,36 @@
 //  Created by Ben Froelich on 9/24/16.
 //  Copyright © 2016 Ben Froelich. All rights reserved.
 //
-
+#include <stdio.h>
 #include <iostream>
 #include "Player.hpp"
 
-void Game::nextTurn()
+Player::Player()
 {
-    // execute a cribbage turn
+    points.clear();
+    points.push_back(0);
+    name.clear();
+};
+void Player::addPoints(int numPoints)
+{
+    int currScore = points.back();
+    points.push_back(currScore+numPoints);
+}
+int Player::getScore()
+{
+    return points.back();
+}
+void Game::executeTurn()
+{
+    int points = 0;
+    // execute a turn
+    std::cout << "enter number of points for " << currPlayer->getName() << " ";
+    std::cin >> points;
     std::cout << "player " << currPlayer->getName() << " went!!!" << "\n";
-    
-    if(currPlayer == players.end()-1)   // std::vector::end() returns the "past-the-end" element in the vector, so subtract 1
+    currPlayer->addPoints(points);
+    std::cout << currPlayer->getName() << "'s " << "current score is "
+    << currPlayer->getScore() << std::endl;
+    if(currPlayer == players.end()-1)   // our iterator is at the last elem in vec
         currPlayer = players.begin();   // wrap around
     
     else currPlayer++;
@@ -26,7 +46,7 @@ Game::Game(unsigned numPlayers, unsigned minPlayers, unsigned maxPlayers)
     this->maxPlayers = maxPlayers;
     this->setNumPlayers(numPlayers);
 }
-void Game::setNumPlayers(<#unsigned int numPlayers#>)
+void Game::setNumPlayers(unsigned int numPlayers)
 {
     players.clear();
     for(int p=0; p<numPlayers; p++)

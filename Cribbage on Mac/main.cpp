@@ -9,19 +9,15 @@
 #include <iostream>
 #include "Player.hpp"
 
-Game players(2,1,5);    // create a 3 player game
+Game game(2,1,5);    // create a game
 	
 int main(int argc, const char * argv[])
 {
 
-    players.setNumPlayers(5);
-    players.nextTurn();
-    players.nextTurn();
-    players.nextTurn();
-    players.nextTurn();
-    players.nextTurn();
-    players.nextTurn();
-    players.nextTurn();
+    game.setNumPlayers(5);
+    for(int i=0; i<10; i++)
+        game.executeTurn();
+
     
     return 0;
 }

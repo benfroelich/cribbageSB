@@ -12,9 +12,9 @@
 #include <stdio.h>
 #include "Player.hpp"
 
-class CribbagePlayerCollection : public Game    // implement cribbage specifics
+class Cribbage : public Game    // implement cribbage specifics
 {
-    CribbagePlayerCollection() : Game(3, 2, 4) {};
+    Cribbage() : Game(3, 2, 4) {};
     void nextTurn();    // overriden virtual from parent class
 private:
     typedef enum PLAYSTATE {PEGGING,        // peg
