@@ -37,8 +37,11 @@ public:
     Game(unsigned numPlayers, unsigned minPlayers, unsigned maxPlayers);
     void setName(unsigned pNum, std::string name);
     void setNumPlayers(unsigned int numPlayers);
+    virtual void begin();   // start the game
     virtual void executeTurn();    // override for different game types
 private:
+    typedef enum {INIT, INPLAY, FINISHED} gameState_t;
+    gameState_t gameState;
     std::vector<Player> players;
     std::vector<Player>::iterator currPlayer;
     unsigned minPlayers;    // max number of players

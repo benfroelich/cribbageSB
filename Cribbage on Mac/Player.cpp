@@ -7,6 +7,7 @@
 //
 #include <stdio.h>
 #include <iostream>
+#include <assert.h>
 #include "Player.hpp"
 
 Player::Player()
@@ -45,9 +46,11 @@ Game::Game(unsigned numPlayers, unsigned minPlayers, unsigned maxPlayers)
     this->minPlayers = minPlayers;
     this->maxPlayers = maxPlayers;
     this->setNumPlayers(numPlayers);
+    this->gameState = INIT;
 }
 void Game::setNumPlayers(unsigned int numPlayers)
 {
+    assert(gameState==INIT);
     players.clear();
     for(int p=0; p<numPlayers; p++)
     {
@@ -59,4 +62,8 @@ void Game::setNumPlayers(unsigned int numPlayers)
     }
     players.shrink_to_fit();
     currPlayer = players.begin();
+}
+void Game::begin()
+{
+    this->gameState = INPLAY;
 }
